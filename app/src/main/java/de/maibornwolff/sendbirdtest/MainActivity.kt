@@ -9,8 +9,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         configureLogger()
         setContentView(R.layout.activity_main)
-        val chatFragmentContainer = MainFragment()
-        supportFragmentManager.beginTransaction().replace(R.id.fragment_layout, chatFragmentContainer).commit()
     }
 
 

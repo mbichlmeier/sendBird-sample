@@ -6,20 +6,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import kotlinx.android.synthetic.main.fragment_main.*
+import kotlinx.android.synthetic.main.fragment_other.*
 
-
-class MainFragment : Fragment() {
-
+class OtherFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_main, container, false)
+        return inflater.inflate(R.layout.fragment_other, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        main_navigation_button.setOnClickListener { findNavController().navigate(R.id.action_mainFragment_to_blankFragment) }
+        other_navigation_button.setOnClickListener { findNavController().navigate(R.id.action_otherFragment_to_customChatFragment) }
     }
 }

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="de.maibornwolff.sendbirdtest.MainFragment"
+        android:label="MainFragment">
+        <action
+            android:id="@+id/action_mainFragment_to_blankFragment"
+            app:destination="@id/otherFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/otherFragment"
+        android:name="de.maibornwolff.sendbirdtest.OtherFragment"
+        android:label="fragment_blank"
+        tools:layout="@layout/fragment_other">
+        <action
+            android:id="@+id/action_otherFragment_to_customChatFragment"
+            app:destination="@id/customChatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/customChatFragment"
+        android:name="de.maibornwolff.sendbirdtest.CustomChatFragment"
+        android:label="fragment_custom_chat"
+        tools:layout="@layout/fragment_custom_chat" />
+</navigation>

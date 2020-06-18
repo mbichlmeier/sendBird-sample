@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".OtherFragment">
 
     <TextView
         android:id="@+id/text_view"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:gravity="center"
-        android:text="Main Fragment"
+        android:text="Other Fragment"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/main_navigation_button"
+        android:id="@+id/other_navigation_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Navigate to next fragment"
+        android:text="Navigate to chat fragment"
         app:layout_constraintTop_toBottomOf="@id/text_view" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
