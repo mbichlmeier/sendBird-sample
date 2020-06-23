@@ -28,7 +28,7 @@ class CustomChatFragment : Fragment() {
     }
 
     override fun onDestroy() {
-        // TODO SENDBIRD-SUPPORT ref:_00D6F1ogkx._5006F2c6g4m:ref
+        // SENDBIRD-SUPPORT ref:_00D6F1ogkx._5006F2c6g4m:ref - technically solved
         /*
         When doing a back press the fragment is destroyed. Even after destroying this Fragment including the inflated ChannelFragment,
         the read recognition icons are still set when when you were leaving the chat window.
@@ -38,7 +38,8 @@ class CustomChatFragment : Fragment() {
         // Suggested solution from SendBird which removes the connection handler
         SendBird.removeConnectionHandler("CONNECTION_HANDLER_GROUP_CHAT")
         SendBird.removeChannelHandler("CHANNEL_HANDLER_GROUP_CHANNEL_CHAT")
-       
+        // Alternative just use SendBird.removeAllChannelHandlers() which works the same way
+        
         super.onDestroy()
     }
 
