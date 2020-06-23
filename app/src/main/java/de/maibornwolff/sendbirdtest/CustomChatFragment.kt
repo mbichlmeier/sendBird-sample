@@ -34,7 +34,11 @@ class CustomChatFragment : Fragment() {
         the read recognition icons are still set when when you were leaving the chat window.
         Only when the app goes into background you are handled as "offline" and other messages sent to you are not marked as read.
          */
-        Timber.d("Fragment lifecycle onDestroy")
+        
+        // Suggested solution from SendBird which removes the connection handler
+        SendBird.removeConnectionHandler("CONNECTION_HANDLER_GROUP_CHAT")
+        SendBird.removeChannelHandler("CHANNEL_HANDLER_GROUP_CHANNEL_CHAT")
+       
         super.onDestroy()
     }
 
